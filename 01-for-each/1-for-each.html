@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuevo</title>
+</head>
+<body>
+  <ul id="app"></ul>
+  <script>
+    console.log('hola')
+    const tasks = [
+      { title:"do bed", todo:true},
+      { title:"wash feet", todo:false },
+      { title:"do dinner", todo:false },
+      { title:"clear", todo:true },
+    ];
+    const example = document.getElementById('app')
+    tasks.forEach(e => {
+      example.innerHTML += `<li>
+        <label>${e.title}</label>
+        <input type="checkbox" ${e.todo == true ? 'checked' : '' }>
+        </li>`
+    })
+  </script>
+</body>
+</html>
